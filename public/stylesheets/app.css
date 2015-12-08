@@ -5,7 +5,8 @@ html,body{
 
 }
 body{
-    overflow-y:scroll;
+    overflow-y:hidden;
+    margin: 0;
 }
 .container{
     height: 95%;
@@ -18,3 +19,43 @@ body{
 .controls{
     text-align: center;
 }
+
+.section{
+			text-align:center;
+		}
+
+		#myVideo{
+			position: absolute;
+			z-index: 4;
+			right: 0;
+			bottom: 0;
+			top:0;
+			right:0;
+			width: 100%;
+			height: 100%;
+			background-size: 100% 100%;
+	 		background-color: black; /* in case the video doesn't fit the whole page*/
+	  		background-image: /* our video */;
+	  		background-position: center center;
+	  		background-size: contain;
+	   		object-fit: cover; /*cover video background */
+		}
+
+		/* Layer with position absolute in order to have it over the video
+		* --------------------------------------- */
+		#section1 .layer{
+			position: absolute;
+			z-index: 5;
+			width: 100%;
+			left: 0;
+			top: 43%;
+			height: 100%;
+		}
+
+		#section1 h1{
+			color:#fff;
+		}
+
+		#infoMenu li a{
+			color: #fff;
+		}
