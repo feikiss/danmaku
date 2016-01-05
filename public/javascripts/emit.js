@@ -1,5 +1,17 @@
 var socket = io();
 
+var dict;
+
+$.ajax({
+    url:  '/dict/dirtyword.txt',
+    dataType: 'text',
+    cache: false,
+    async: false,
+    success: function(data) {
+        dict = data.split('|');
+    }
+});
+
 $('#popupMenu_font a').click(function(e){
     $('#size').text($(e.target).text()).attr("danmaku-size",$(e.target).attr("danmaku-size"));
 });
@@ -14,6 +26,10 @@ $('#popupMenu_color a').click(function(e){
 
 $('#btnSend').click(function(e){
     e.preventDefault();
+    if (dict.indexOf($('#msg').val()) != -1) {
+        alert('小伙伴不要发不好的词语哟~');
+        return;
+    }
     var danmaku = {
         "mode": Number($("#mode").attr("danmaku-mode")),
         "text": $('#msg').val(),
