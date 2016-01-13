@@ -6,45 +6,146 @@ html
         link(rel='stylesheet', href='/stylesheets/app.css')
         link(rel='stylesheet', href='/stylesheets/jquery.pagepiling.css')
         link(rel='stylesheet', href='/stylesheets/examples.css')
+
+        link(rel='stylesheet', href='/stylesheets/demo.css')
+        link(rel='stylesheet', href='/stylesheets/custom.css')
+        link(rel='stylesheet', href='/stylesheets/slicebox.css')
+
+        script(src='/javascripts/modernizr.custom.46884.js')
         script(src='https://cdn.bootcss.com/socket.io/1.3.2/socket.io.js')
         script(src='https://cdn.bootcss.com/jquery/2.1.3/jquery.js')
         script(src='/javascripts/index.js')
         script(src='/javascripts/CommentCoreLibrary.js')
+
         script(src='/javascripts/jquery.pagepiling.js')
+        script(src='/javascripts/jquery.slicebox.js')
         script(src='/javascripts/jquery.pagepiling.min.js')
         script(type='text/javascript').
             $(document).ready(function() {
             $('#pagepiling').pagepiling({
             menu: '#menu',
             anchors: ['page1', 'page2', 'page3'],
-            sectionsColor: ['#bfda00', '#2ebe21', '#2C3E50', '#51bec4'],
+            sectionsColor: ['#111111', '#111111', '#2C3E50'],
             navigation: {'position': 'right','tooltips': ['Page 1', 'Page 2', 'Page 3']}
             });
             });
 
     body
         #my-player.abp(style='width:100%; height:100%; background:#000;overflow:hidden')
-            
+
             ul#menu
                 li.active(data-menuanchor='page1')
-                    a(href='#page1') page1
+                    a(href='#page1') Video
                 li(data-menuanchor='page2')
-                    a(href='#page2') page2
+                    a(href='#page2') PPT
                 li(data-menuanchor='page3')
-                    a(href='#page3') page3        
-
+                    a(href='#page3') Page
             div#pagepiling
                 div#section1.section
                     video#abpVideo(poster="http://content.bitsontherun.com/thumbs/bkaovAYt-720.jpg" controls="none")
                         source(src="http://dd.yinyuetai.com/uploads/videos/common/E9E701411BDDC46EFD7F429E7093043A.mp4?sc=162fac57822c195" type="video/mp4")
                         p.warning Your browser does not support HTML5 video.
-                    #my-comment-stage.container
                 div#section2.section
-                    h1 welcome to tocao
+                    .container
+                        .wrapper
+                            ul#sb-slider.sb-slider
+                                li
+                                    img(src='/images/幻灯片01.jpg')
+                                li
+                                    img(src='/images/幻灯片02.jpg')
+                                li
+                                    img(src='/images/幻灯片03.jpg')
+                                li
+                                    img(src='/images/幻灯片04.jpg')
+                                li
+                                    img(src='/images/幻灯片05.jpg')
+                                li
+                                    img(src='/images/幻灯片06.jpg')
+                                li
+                                    img(src='/images/幻灯片07.jpg')
+                                li
+                                    img(src='/images/幻灯片08.jpg')
+                                li
+                                    img(src='/images/幻灯片09.jpg')
+                                li
+                                    img(src='/images/幻灯片10.jpg')
+                                li
+                                    img(src='/images/幻灯片11.jpg')
+                                li
+                                    img(src='/images/幻灯片12.jpg')
+                                li
+                                    img(src='/images/幻灯片13.jpg')
+                                li
+                                    img(src='/images/幻灯片14.jpg')
+                                li
+                                    img(src='/images/幻灯片15.jpg')
+                                li
+                                    img(src='/images/幻灯片16.jpg')
+                                li
+                                    img(src='/images/幻灯片17.jpg')
+                                li
+                                    img(src='/images/幻灯片18.jpg')
+                                li
+                                    img(src='/images/幻灯片19.jpg')
+                                li
+                                    img(src='/images/幻灯片20.jpg')
+                                li
+                                    img(src='/images/幻灯片21.jpg')
+                                li
+                                    img(src='/images/幻灯片22.jpg')
+                                li
+                                    img(src='/images/幻灯片23.jpg')
+                            #nav-options.nav-options
+                                span#navPlay Play
+                                span#navPause Pause
+
+
+                        script(src='/javascripts/jquery.slicebox.js')
+                        script(type='text/javascript').
+                            $(function() {
+                            var Page = (function() {
+                            var $navArrows = $( '#nav-arrows' ).hide(),
+                            $navOptions = $( '#nav-options' ).hide(),
+                            slicebox = $( '#sb-slider' ).slicebox( {
+                            onReady : function() {
+                            $navArrows.show();
+                            $navOptions.show();
+                            },
+                            orientation : 'r',
+                            cuboidsRandom : true,
+                            cuboidsCount: 3,
+                            disperseFactor : 30,
+                                interval: 9000
+                            } ),
+                            init = function() {
+                            initEvents();
+                            },
+                            initEvents = function() {
+                            // add navigation events
+                            $navArrows.children( ':first' ).on( 'click', function() {
+                            slicebox.next();
+                            return false;
+                            } );
+                            $navArrows.children( ':last' ).on( 'click', function() {
+                            slicebox.previous();
+                            return false;
+                            } );
+                            $('#navPlay').on('click', function () {
+                            slicebox.play();
+                            return false;
+                            });
+                            $('#navPause').on('click', function () {
+                            slicebox.pause();
+                            return false;
+                            });
+                            };
+                            return { init : init };
+                            })();
+                            Page.init();
+                            });
                 div#section3.section
-                    h1 draw for a prize    
-            
-        
+                    h1 draw for a prize
+                #my-comment-stage.container
 
 
 
@@ -56,4 +157,5 @@ html
 
 
 
-        
+
+

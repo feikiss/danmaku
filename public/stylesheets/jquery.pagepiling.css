@@ -45,6 +45,10 @@ html, body {
 #pp-nav.left {
     left: 17px;
 }
+#my-comment-stage {
+    height: 80%;
+    margin-top: 70px;
+}
 .pp-section.pp-table{
     display: table;
 }

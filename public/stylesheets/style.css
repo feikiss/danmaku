@@ -6,7 +6,7 @@
           transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1);
   position: absolute;
   display: block;
-  overflow: hidden;
+  /*overflow: hidden;*/
   margin: 0;
   border: 0;
   top: 0;
