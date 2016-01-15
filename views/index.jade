@@ -24,9 +24,9 @@ html
             $(document).ready(function() {
             $('#pagepiling').pagepiling({
             menu: '#menu',
-            anchors: ['page1', 'page2', 'page3'],
-            sectionsColor: ['#111111', '#111111', '#2C3E50'],
-            navigation: {'position': 'right','tooltips': ['Page 1', 'Page 2', 'Page 3']}
+            anchors: ['page1', 'page2', 'page3','page4'],
+            sectionsColor: ['#111111', '#111111', '#2C3E50', '#111111'],
+            navigation: {'position': 'right','tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page4']}
             });
             });
 
@@ -35,17 +35,21 @@ html
 
             ul#menu
                 li.active(data-menuanchor='page1')
-                    a(href='#page1') Video
+                    a(href='#page1') Happy
                 li(data-menuanchor='page2')
-                    a(href='#page2') PPT
+                    a(href='#page2') QinSong
                 li(data-menuanchor='page3')
-                    a(href='#page3') Page
+                    a(href='#page3') PPT
+                li(data-menuanchor='page4')
+                    a(href='#page4') View
             div#pagepiling
                 div#section1.section
                     video#abpVideo(poster="http://content.bitsontherun.com/thumbs/bkaovAYt-720.jpg" controls="none")
-                        source(src="http://dd.yinyuetai.com/uploads/videos/common/E9E701411BDDC46EFD7F429E7093043A.mp4?sc=162fac57822c195" type="video/mp4")
-                        p.warning Your browser does not support HTML5 video.
+                        source(src='/images/Leaders.mp4' type="video/mp4")
                 div#section2.section
+                    video#abpVideo(poster="http://content.bitsontherun.com/thumbs/bkaovAYt-720.jpg" controls="none")
+                        source(src='/images/qin.mp4' type="video/mp4")
+                div#section3.section
                     .container
                         .wrapper
                             ul#sb-slider.sb-slider
@@ -143,9 +147,10 @@ html
                             })();
                             Page.init();
                             });
-                div#section3.section
+                div#section4.section
                     h1 draw for a prize
                 #my-comment-stage.container
+
 
 
 
