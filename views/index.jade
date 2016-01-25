@@ -10,6 +10,7 @@ html
         link(rel='stylesheet', href='/stylesheets/demo.css')
         link(rel='stylesheet', href='/stylesheets/custom.css')
         link(rel='stylesheet', href='/stylesheets/slicebox.css')
+        link(rel='styleSheet', href='/stylesheets/button.css')
 
         script(src='/javascripts/modernizr.custom.46884.js')
         script(src='https://cdn.bootcss.com/socket.io/1.3.2/socket.io.js')
@@ -44,10 +45,10 @@ html
                     a(href='#page4') View
             div#pagepiling
                 div#section1.section
-                    video#abpVideo(poster="http://content.bitsontherun.com/thumbs/bkaovAYt-720.jpg" controls="none")
+                    video#abpVideo(poster="/images/年会背景1.jpg" controls="none")
                         source(src='/images/Leaders.mp4' type="video/mp4")
                 div#section2.section
-                    video#abpVideo(poster="http://content.bitsontherun.com/thumbs/bkaovAYt-720.jpg" controls="none")
+                    video#abpVideo(poster="/images/年会背景1.jpg" controls="none")
                         source(src='/images/qin.mp4' type="video/mp4")
                 div#section3.section
                     .container
@@ -109,7 +110,7 @@ html
                             $(function() {
                             var Page = (function() {
                             var $navArrows = $( '#nav-arrows' ).hide(),
-                            $navOptions = $( '#nav-options' ).hide(),
+                            $navOptions = $( '#nav-options' ).hide()
                             slicebox = $( '#sb-slider' ).slicebox( {
                             onReady : function() {
                             $navArrows.show();
@@ -119,7 +120,7 @@ html
                             cuboidsRandom : true,
                             cuboidsCount: 3,
                             disperseFactor : 30,
-                                interval: 9000
+                            interval: 9000
                             } ),
                             init = function() {
                             initEvents();
@@ -148,7 +149,138 @@ html
                             Page.init();
                             });
                 div#section4.section
-                    h1 draw for a prize
+                    .container
+                        .wrapper
+                            ul#sb-slider1.sb-slider
+                                li
+                                    img(src='/images/年会背景1.jpg')
+                                li
+                                    img(src='/images/年会背景2.jpg')
+                                li
+                                    img(src='/images/年会背景3.jpg')
+                                li
+                                    img(src='/images/年会背景4.png')
+                                li
+                                    img(src='/images/年会背景5.jpg')
+                                li
+                                    img(src='/images/年会背景1.jpg')
+                                li
+                                    img(src='/images/年会背景6.jpg')
+                                li
+                                    img(src='/images/年会背景7.jpg')
+                                li
+                                    img(src='/images/年会背景8.jpg')
+                                li
+                                    img(src='/images/年会背景9.jpg')
+                                li
+                                    img(src='/images/年会背景10.jpg')
+                                li
+                                    img(src='/images/年会背景11.jpg')
+                                li
+                                    img(src='/images/年会背景12.jpg')
+                                li
+                                    img(src='/images/年会背景13.jpg')
+                                li
+                                    img(src='/images/年会背景14.jpg')
+                                li
+                                    img(src='/images/年会背景15.jpg')
+                                li
+                                    img(src='/images/年会背景8.jpg')
+                                li
+                                    img(src='/images/年会背景16.jpg')
+                                li
+                                    img(src='/images/年会背景17.jpg')
+                                li
+                                    img(src='/images/年会背景18.jpg')
+                                li
+                                    img(src='/images/年会背景1.jpg')
+                                li
+                                    img(src='/images/年会背景19.jpg')
+                                li
+                                    img(src='/images/ppt1.jpg')
+                                li
+                                    img(src='/images/ppt2.jpg')
+                                li
+                                    img(src='/images/ppt3.jpg')
+                                li
+                                    img(src='/images/ppt4.jpg')
+                                li
+                                    img(src='/images/ppt5.jpg')
+                                li
+                                    img(src='/images/年会背景20.jpg')
+                                li
+                                    img(src='/images/年会背景2.jpg')
+                                li
+                                    img(src='/images/年会背景21.jpg')
+                            #nav-arrows1.nav-arrows
+                                a(href='#') Next
+                                a(href='#') Previous
+
+
+
+                        script(src='/javascripts/jquery.slicebox.js')
+                        script(type='text/javascript').
+                            $(function() {
+                                var Page = (function() {
+                                    var $navArrows = $( '#nav-arrows1' ).hide(),
+                                            $navOptions = $( '#nav-options1' ).hide()
+                                    slicebox = $( '#sb-slider1' ).slicebox( {
+                                        onReady : function() {
+                                            $navArrows.show();
+                                            $navOptions.show();
+                                        },
+                                        orientation : 'r',
+                                        cuboidsRandom : true,
+                                        cuboidsCount: 3,
+                                        disperseFactor : 30,
+                                        interval: 9000
+                                    } ),
+                                            init = function() {
+                                                initEvents();
+                                            },
+                                            initEvents = function() {
+                            // add navigation events
+                                                $navArrows.children( ':first' ).on( 'click', function() {
+                                                    slicebox.next();
+                                                    return false;
+                                                } );
+                                                $navArrows.children( ':last' ).on( 'click', function() {
+                                                    slicebox.previous();
+                                                    return false;
+                                                } );
+                                                $('#navPlay1').on('click', function () {
+                                                    slicebox.play();
+                                                    return false;
+                                                });
+                                                $('#navPause1').on('click', function () {
+                                                    slicebox.pause();
+                                                    return false;
+                                                });
+                                            };
+                                    return { init : init };
+                                })();
+                                Page.init();
+                            });
+                    section#model-6.mod
+                        .menu
+                            .bar
+                            .bar
+                            .bar
+                    script(type='text/javascript').
+                        $(document).ready(function(){
+                            $('#model-6').click(function () {
+                                $("#my-comment-stage").css("display", function (enableTag) {
+                                    var test = $("#my-comment-stage").css("display");
+                                    if (test === 'block'){
+                                        $('#my-comment-stage').css('display',"none");
+                                    }else if(test =='none'){
+                                        $('#my-comment-stage').css('display',"inline");
+                                    }else {
+                                        $('#my-comment-stage').css('display','none');
+                                    }
+                                });
+                            })
+                        });
                 #my-comment-stage.container
 
 

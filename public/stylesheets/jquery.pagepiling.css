@@ -46,8 +46,9 @@ html, body {
     left: 17px;
 }
 #my-comment-stage {
-    height: 80%;
+    height: 70%;
     margin-top: 70px;
+    display: inline;
 }
 .pp-section.pp-table{
     display: table;

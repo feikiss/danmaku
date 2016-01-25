@@ -28,7 +28,7 @@
 	height: 42px;
 	background: #49bb9c url(../images/nav.png) no-repeat top left;
 	position: absolute;
-	top: 50%;
+	top: 92%;
 	left: 2px;
 	text-indent: -9000px;
 	cursor: pointer;
@@ -80,7 +80,7 @@
 }
 
 .nav-options {
-	width: 70px;
+	width: 100px;
 	height: 30px;
 	position: absolute;
 	right: 70px;
