@@ -45,14 +45,19 @@ html, body {
 #pp-nav.left {
     left: 17px;
 }
+#my-comment-stage {
+    height: 70%;
+    margin-top: 70px;
+    display: inline;
+}
 .pp-section.pp-table{
     display: table;
 }
 .pp-tableCell {
-    display: table-cell;
+    display: table-row;
     vertical-align: middle;
     width: 100%;
-    height: 100% !important;
+    /*height: 100% !important;*/
 }
 .pp-slidesNav{
     position: absolute;

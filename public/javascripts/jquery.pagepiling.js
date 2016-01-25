@@ -211,7 +211,7 @@
         * Enables vertical centering by wrapping the content and the use of table and table-cell
         */
         function addTableClass(element){
-            element.addClass('pp-table').wrapInner('<div class="pp-tableCell" style="height:100%" />');
+            element.addClass('pp-table').wrapInner('<div class="pp-tableCell" />');
         }
 
 
